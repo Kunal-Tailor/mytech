@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle.jsx";
 import { ThemeSliderAdvanced } from "./ThemeSliderAdvanced.jsx";
 import logoImage from "@/assets/logo.png"; // Correct path to your local logo
+import { Link } from "react-router-dom";
 
 export function Navigation() {
   return (
@@ -15,21 +16,21 @@ export function Navigation() {
                 className="w-10 h-10 object-contain"
               />
             <h1 className="text-white">MIT Tech Innovators Club</h1>
-              
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <Button variant="ghost" className="text-foreground hover:text-primary hover:bg-primary/10">
-                Home
+              <Button asChild variant="ghost" className="text-foreground hover:text-primary hover:bg-primary/10">
+                <Link to="/">Home</Link>
               </Button>
-              <Button variant="ghost" className="text-foreground hover:text-primary hover:bg-primary/10">
-                About
+              <Button asChild variant="ghost" className="text-foreground hover:text-primary hover:bg-primary/10">
+                <Link to="/about">About</Link>
               </Button>
               <Button variant="ghost" className="text-foreground hover:text-primary hover:bg-primary/10">
                 Members
               </Button>
               <Button variant="ghost" className="text-foreground hover:text-primary hover:bg-primary/10">
-                Upcoming Events
+                
+                <Link to="/events">Upcoming Events</Link>
               </Button>
               <Button variant="ghost" className="text-foreground hover:text-primary hover:bg-primary/10">
                 Contact Us
